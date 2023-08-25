@@ -4,12 +4,28 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Agenda.Clinica</title>
+
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Agenda.Clinica.styles.css" asp-append-version="true" />
+
+
+   @*  <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Demo.styles.css" asp-append-version="true" /> *@
+
+   @*  <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/22.2.5/fluent.css" />
+ *@
+    <!-- Syncfusion ASP.NET Core controls styles -->
+    <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/22.2.5/material.css" />
+
+    <script src="https://cdn.syncfusion.com/ej2/22.2.5/dist/ej2.min.js"></script>
+
 </head>
 <body>
-    <header>
+    <div class="container">
+
+      <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"> 📆 </a>
@@ -24,9 +40,13 @@
                         </li>
 
 
-                        @* <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Têrmo de uso</a>
-                        </li> *@
+                        <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Schedule" asp-action="ScheduleFeatures">Agendamento</a>
+                        </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Schedule" asp-action="ScheduleFeatures">Grid</a>
+                            </li>
 
                     </ul>
                     <partial name="_LoginPartial" />
@@ -34,10 +54,12 @@
             </div>
         </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
+   
+ 
+     <main role="main" class="pb-3">
             @RenderBody()
-        </main>
+     </main>
+
     </div>
 
     <footer class="border-top footer text-muted">
@@ -50,9 +72,27 @@
             
         </div>
     </footer>
+  
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+
+  
+
+   @*  <script>
+        var ajax = new ej.base.Ajax(location.origin + '/../../locale/pt-BR.json', 'GET', false);   //load the de json culture file
+        ajax.send().then((e) => {
+            var loader = JSON.parse(e);
+            ej.base.L10n.load(
+                loader
+            );
+            ej.base.setCulture('pt-BR');      //Set the culture for the ASP.NET Core controls
+        });
+    </script> *@
+
+    <!-- Syncfusion Script Manager -->
+    @Html.EJS().ScriptManager()
+
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

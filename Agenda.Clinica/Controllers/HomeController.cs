@@ -18,6 +18,11 @@ namespace Agenda.Clinica.Controllers
             return View();
         }
 
+        public IActionResult Agendamento()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();

@@ -1,0 +1,33 @@
+﻿@using Syncfusion.EJ2;
+@using Syncfusion.EJ2.Schedule;
+@{
+    ViewBag.Title = "Schedule";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="containder">
+
+
+    <h2>Agendamento:</h2>
+
+    <div>
+        @Html.EJS().Calendar("calendar").Render()
+    </div>
+
+
+    <div>
+        @Html.EJS().Schedule("agendamento").Render()
+    </div>
+
+
+   
+    <div id="ControlRegion">
+
+        <ejs-schedule id="schedule" height="550px" selectedDate="new DateTime(2018, 2, 15)">
+            <e-schedule-eventsettings dataSource="@ViewBag.datasource">
+
+            </e-schedule-eventsettings>
+        </ejs-schedule>
+    </div>
+
+</div>
