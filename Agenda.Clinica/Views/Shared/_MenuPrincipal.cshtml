@@ -1,15 +1,81 @@
 ﻿<ul class="navbar-nav flex-grow-1">
-    <li class="nav-item">
-        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Agenda</a>
+   
+
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Contatos
+        </a>
+        <ul class="dropdown-menu">
+           
+            <li><a class="nav-link text-dark" asp-area="" asp-controller="Pessoas" asp-action="Index">Pessoas</a></li>
+           
+        </ul>
     </li>
 
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Agenda
+        </a>
+        <ul class="dropdown-menu">
 
-    <li class="nav-item">
-        <a class="nav-link text-dark" asp-area="" asp-controller="Schedule" asp-action="ScheduleFeatures">Agendamento</a>
+            <li><a class="nav-link text-dark" asp-area="" asp-controller="Pessoas" asp-action="Index">Agenda Livre</a></li>
+            <li><a class="nav-link text-dark" asp-area="" asp-controller="Pessoas" asp-action="Index">Marcações</a></li>
+            <li><a class="nav-link text-dark" asp-area="" asp-controller="Pessoas" asp-action="Index">Compromisso</a></li>
+            <li><a class="nav-link text-dark" asp-area="" asp-controller="Pessoas" asp-action="Index">Novo Compromisso</a></li>
+            <li><a class="nav-link text-dark" asp-area="" asp-controller="Pessoas" asp-action="Index">Eventos das senhas</a></li>
+
+        </ul>
     </li>
 
-    <li class="nav-item">
-        <a class="nav-link text-dark" asp-area="" asp-controller="Schedule" asp-action="ScheduleFeatures">Grid</a>
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Atendimento
+        </a>
+        <ul class="dropdown-menu">
+
+            <li><a class="nav-link text-dark" asp-area="" asp-controller="Pessoas" asp-action="Index">Pessoas</a></li>
+
+        </ul>
     </li>
 
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Equipe
+        </a>
+        <ul class="dropdown-menu">
+
+            <li><a class="nav-link text-dark" asp-area="" asp-controller="Pessoas" asp-action="Index">Tarefas</a></li>
+            <li><a class="nav-link text-dark" asp-area="" asp-controller="Pessoas" asp-action="Index">Dados Clínicos</a></li>
+            <li><a class="nav-link text-dark" asp-area="" asp-controller="Pessoas" asp-action="Index">Ocupação</a></li>
+            <li><a class="nav-link text-dark" asp-area="" asp-controller="Pessoas" asp-action="Index">Inclusão em carteira</a></li>
+            <li><a class="nav-link text-dark" asp-area="" asp-controller="Pessoas" asp-action="Index">Manutenção de carteira</a></li>
+
+        </ul>
+    </li>
+
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Financeiro
+        </a>
+        <ul class="dropdown-menu">
+
+            <li><a class="nav-link text-dark" asp-area="" asp-controller="Pessoas" asp-action="Index">Pessoas</a></li>
+
+        </ul>
+    </li>
+
+     <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            POC
+        </a>
+        <ul class="dropdown-menu">
+
+            <li><a class="nav-link text-dark" asp-area="" asp-controller="Schedule" asp-action="ScheduleFeatures">Agendamento</a></li>
+
+          <li><a class="nav-link text-dark" asp-area="" asp-controller="Grid" asp-action="Index">Consultas</a></li>
+
+        </ul>
+    </li>
+
+   
 </ul>
