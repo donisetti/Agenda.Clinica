@@ -9,21 +9,10 @@
 
 
     <h2>Agendamento:</h2>
-
-    <div>
-        @Html.EJS().Calendar("calendar").Render()
-    </div>
-
-
-    <div>
-        @Html.EJS().Schedule("agendamento").Render()
-    </div>
-
-
-   
+       
     <div id="ControlRegion">
 
-        <ejs-schedule id="schedule" height="550px" selectedDate="new DateTime(2018, 2, 15)">
+        <ejs-schedule id="schedule" height="550px" selectedDate="new DateTime(2023, 8, 20)" locale="pt">
             <e-schedule-eventsettings dataSource="@ViewBag.datasource">
 
             </e-schedule-eventsettings>
@@ -31,3 +20,26 @@
     </div>
 
 </div>
+
+
+<script>
+
+    loadCultureFiles('pt');
+    function loadCultureFiles(name) {
+        var files = ['ca-gregorian.json', 'numbers.json', 'timeZoneNames.json'];
+        var loader = ej.base.loadCldr;
+        var loadCulture = function (prop) {
+            var val, ajax;
+            ajax = new ej.base.Ajax(location.origin + '/../cldr-data/main/' + name + '/' + files[prop], 'GET', false);
+            ajax.onSuccess = function (value) {
+                val = value;
+            };
+            ajax.send();
+            loader(JSON.parse(val));
+        };
+        for (var prop = 0; prop < files.length; prop++) {
+            loadCulture(prop);
+        }
+    }
+
+</script>

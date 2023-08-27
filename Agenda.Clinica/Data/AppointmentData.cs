@@ -1,6 +1,6 @@
 ﻿namespace Agenda.Clinica.Data;
 
-public class AppointmentData
+public class AppointmentData // marcação
 {
     public int Id { get; set; }
     public string Subject { get; set; }

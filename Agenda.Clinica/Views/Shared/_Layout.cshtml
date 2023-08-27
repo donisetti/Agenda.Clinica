@@ -60,13 +60,14 @@
 
   
 
-   @*  <script>
+    @* <script>
         var ajax = new ej.base.Ajax(location.origin + '/../../locale/pt-BR.json', 'GET', false);   //load the de json culture file
         ajax.send().then((e) => {
             var loader = JSON.parse(e);
             ej.base.L10n.load(
                 loader
             );
+
             ej.base.setCulture('pt-BR');      //Set the culture for the ASP.NET Core controls
         });
     </script> *@
